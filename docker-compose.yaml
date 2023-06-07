@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:13
+    restart: always
+    container_name: users-service-db
+    ports:
+      - '5434:5432'
+    environment:
+      POSTGRES_USER: dumi
+      POSTGRES_PASSWORD: dumi
+      POSTGRES_DB: users
+  # users-service:
+  #   image: dumimerlusca/users-service
+  #   container_name: users-service
+  #   ports:
+  #     - '3002:3000'
+    
