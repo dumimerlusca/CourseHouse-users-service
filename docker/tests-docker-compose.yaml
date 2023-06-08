@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:13
+    restart: always
+    container_name: integration-tests-users-service-users-db
+    ports:
+      - "5451:5432"
+    environment:
+      POSTGRES_USER: jest
+      POSTGRES_PASSWORD: jest
+      POSTGRES_DB: tests
